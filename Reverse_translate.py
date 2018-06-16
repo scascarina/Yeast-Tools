@@ -4,8 +4,11 @@ optimal_codons = {'A' : 'GCT', 'C' : 'TGT', 'D' : 'GAT', 'E' : 'GAA', 'F' : 'TTT
                 'M' : 'ATG', 'N' : 'AAT', 'P' : 'CCA', 'Q' : 'CAA', 'R' : 'AGA',
                 'S' : 'TCT', 'T' : 'ACT', 'V' : 'GTT', 'W' : 'TGG', 'Y' : 'TAT'}
 
-def rev_translate(input_file):
-    
+def rev_translate():
+    import sys
+    program_name = sys.argv[0]
+    args = sys.argv[1:]
+    input_file = args[0]
     h = open(input_file)
     
     dna = ''
@@ -18,9 +21,9 @@ def rev_translate(input_file):
             else:
                 dna += 'nnn'
             
-    output_name = input_file[:-4] + '_rev_translated.txt'
+    output_name = input_file[:-4] + '_REVERSE_TRANSLATED.txt'
     output = open(output_name, 'w')
     output.write(dna)
     
 if __name__ == '__main__':
-    rev_translate('Nterm Scramble4.txt')
+    rev_translate()
