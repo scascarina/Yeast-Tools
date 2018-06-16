@@ -9,7 +9,9 @@ From command line, type:  _python Reverse_translate.py [name of your protein seq
 Example:  python Reverse_translate.py 'Sup35 protein sequence.txt'
 
 ## yeast_gene_name_conversion.py
-A script that accepts a file containing a list of yeast genes (either as ORF names or common yeast gene names, with on 1 gene per line) in a plain text file and converts them to the common gene name or ORF name respectively. Most lists of gene names pasted directly into a plain text editor will result in one gene per line. Simply save the file and run the yeast_gene_name_conversion.py script to convert the gene names.  
+A script that accepts a file containing a list of yeast genes (either as ORF names or common yeast gene names, with on 1 gene per line) in a plain text file and converts them to the common gene name or OF name respectively. Most lists of gene names pasted directly into a plain text editor will result in one gene per line. Simply save the file and run the yeast_gene_name_conversion.py script to convert the gene names. ORFs without a common name will remain as the ORF name. If a gene is not found within in the script, an error message will be printed in the terminal but the script will continue with the remainder of the file.  
+  
+  
 A WORD OF CAUTION: in rare cases, the common name for a yeast gene is also an alias for a different gene. 
 
 #### Usage:
